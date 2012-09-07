@@ -572,7 +572,7 @@ Handlebarsは引数が`false`、`undefined`、`null`あるいは`[]`(どのfalsy
 Handlebars内でURLを画像として表示する最適な方法は以下:
 
 	<div id="logo">
-		<img {{bindAttr ="logoUrl"}} alt="Logo">
+		<img {{bindAttr src ="logoUrl"}} alt="Logo">
 	</div>
 
 そしてこれは以下のHTMLを生成する:
