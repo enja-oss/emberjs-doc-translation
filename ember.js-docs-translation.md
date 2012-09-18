@@ -589,7 +589,7 @@ Handlebars内でURLを画像として表示する最適な方法は以下:
 
 そして以下のテンプレート:
 
-	<input type="checkbox" {{bindAttr ="isDisabled"}}>
+	<input type="checkbox" {{bindAttr disabled="isDisabled"}}>
 
 Handlebarsは以下のHTMLを生成する:
 
@@ -620,7 +620,7 @@ HTML:
 
 バインドする値がブーリアン値の場合、ダッシュが追加されたプロパティがクラスとして扱われる:
 
-	<div {{bindAttr ="isUrgent"}}>
+	<div {{bindAttr class="isUrgent"}}>
 		Warning!
 	</div>
 
@@ -632,13 +632,13 @@ HTML:
 
 ほかの属性値と異なり、複数クラスをバインドすることもできる:
 
-	<div {{bindAttr ="isUrgent "}}>
+	<div {{bindAttr class="isUrgent"}}>
 		Warning!
 	</div>
 
 ダッシュ追加方式のクラス名のほかに自由に名前を指定することもできる:
 
-	<div {{bindAttr ="isUrgent:urgent"}}>
+	<div {{bindAttr class="isUrgent:urgent"}}>
 		Warning!
 	</div>
 
@@ -1156,7 +1156,11 @@ Enumerableオブジェクトの書く要素であるメドッドを実行した�
 
 #### 配列への変換
 
-`toArray`メソッドを使ってEnumerableから配列を生成できる:
+`toArray`メソッドを使ってEnumerableから配列を生成できる。
+
+#### 変換
+
+`map`メソッドを使えばEnumerableをもとにした配列に変換できる。:
 
 	['Goodbye', 'cruel', 'world'].map(function(item, index, self) {
 		return item + "!";
